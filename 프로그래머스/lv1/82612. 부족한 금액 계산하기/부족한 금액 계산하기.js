@@ -10,11 +10,7 @@ function solution(price, money, count) {
     for(let i = 1; i <= count; i++) {
         a += price*i
     }
-    
-    if (a > money) {
-        return a - money;
-    } else {
-        return 0
-    }
+
+    return a > money ? (a - money) : 0
 
 }
