@@ -1,8 +1,5 @@
 function solution(array, n) {
-    return array.sort((a,b) => a - b)
-                .reduce((acc, cur) => 
-                    Math.abs(cur - n ) < Math.abs(acc - n) ? 
-                           cur : acc)
+return array.reduce((a,c)=> Math.abs(a-n) < Math.abs(c-n) ? a : Math.abs(a-n) === Math.abs(c-n) ? Math.min(a, c) : c);
                         
     
 }
