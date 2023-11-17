@@ -1,8 +1,8 @@
 function solution(food) {
-    let answer = '';
-    const leftFoodSet = food.map((food,idx)=>{
-       const sameFoodCount = Math.floor(food/2)
-       return idx !== 0 ? String(idx).repeat(sameFoodCount) : ''
-    }).join('')
-    return leftFoodSet.concat('0').concat(leftFoodSet.split('').reverse().join(''));
+    let res = '';
+    for (let i = 1; i < food.length; i++) {
+        res += String(i).repeat(Math.floor(food[i]/2));
+    }
+
+    return res + '0' + [...res].reverse().join('');
 }
