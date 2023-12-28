@@ -1,12 +1,6 @@
 function solution(arr) {
-    const indices = arr.reduce((acc, cur, idx) => {
-        if (cur === 2) {
-            acc.push(idx)
-        }
+    const from = arr.indexOf(2);
+    const end = arr.lastIndexOf(2);
 
-        return acc;
-    }, [])
-    const answer = arr.slice(indices[0], indices[indices.length - 1] + 1);
-
-    return answer.length ? answer : [-1];
+    return from === -1 ? [-1] : arr.slice(from, end+1);
 }
