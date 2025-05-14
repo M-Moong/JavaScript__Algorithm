@@ -49,9 +49,7 @@ function solution(participant, completion) {
 
     // 3. Map 순회하며 개수가 0이 아닌 선수 찾아서 바로 반환
     for (const [runner, count] of runMap.entries()) {
-        if (count > 0) { 
-            return runner; 
-        }
+        if (count > 0) return runner;
     }
 
     return '';
