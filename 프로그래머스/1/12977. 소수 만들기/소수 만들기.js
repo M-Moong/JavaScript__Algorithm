@@ -1,5 +1,5 @@
 function solution(nums) {
-    let plusedNumberArray = []
+    let plusedNumberArray = [];
     
     for (let i = 0; i < nums.length - 2; i++) {
         for (let j = i + 1; j < nums.length - 1; j++) {
