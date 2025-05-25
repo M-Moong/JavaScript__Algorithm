@@ -8,17 +8,23 @@ function solution(nums) {
     // [3번, 1번, 2번, 3번]
     // 31,32,33,12,13,23
     
-    const possibleCount = nums.length/2
+//     const possibleCount = nums.length/2
     
-    const uniqueNumbers = new Set(nums)
+//     const uniqueNumbers = new Set(nums)
     
-    const aa = uniqueNumbers.size
+//     const aa = uniqueNumbers.size
     
     
-    if(aa <= possibleCount) {
-        return aa
-    } else {
-        return possibleCount
-    }
+//     if(aa <= possibleCount) {
+//         return aa
+//     } else {
+//         return possibleCount
+//     }
+    
+    const maxCount = Math.floor(nums.length / 2)
+    const unique = new Set(nums).size
+    
+    return unique < maxCount ? unique : maxCount
+    
 
 }
