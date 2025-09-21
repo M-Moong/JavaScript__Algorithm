@@ -1,8 +1,5 @@
 function solution(s) {
-    const array = s.split(' ').map(item => Number(item));
-    
-    const maxNumber = Math.max(...array)
-    const minNumber = Math.min(...array)
+    const array = s.split(' ')
   
-    return `${minNumber} ${maxNumber}`
+    return `${Math.min(...array)} ${Math.max(...array)}`
 }
